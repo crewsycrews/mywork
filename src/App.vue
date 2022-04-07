@@ -4,31 +4,19 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
-  <div
-    style="
-      height: 100vh;
-      background-image: url('https://thumb.tildacdn.com/tild3130-6234-4739-b461-323535666534/-/format/webp/photo_2022-03-23_14-.jpg');
-      width: 100%;
-      background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      position: absolute;
-      background-attachment: fixed;
-      top: 0;
-      left: 0;
-      transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: unset;
-    "
-  ></div>
+  <div class="cover"></div>
   <header>
     <div class="wrapper">
       <HelloWorld msg="Коворкинг в центре Сочи" />
     </div>
   </header>
+  <div class="wrapper">
+    <h2 class="selling-phrase">Новый коворкинг в самом центре Сочи!</h2>
+    <h2 class="selling-phrase">
+      MyWork — это место для комфортной работы для предпринимателей и
+      фрилансеров
+    </h2>
+  </div>
 
   <!-- <RouterView /> -->
 </template>
@@ -47,6 +35,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
+  margin-bottom: 2rem;
 }
 
 .logo {
@@ -54,10 +43,8 @@ header {
   margin: 0 auto 2rem;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
 
@@ -65,6 +52,12 @@ a,
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
+}
+
+.selling-phrase {
+  color: black;
+  font-family: "Roboto";
+  text-align: center;
 }
 
 nav {
@@ -92,12 +85,27 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.cover {
+  height: 100vh;
+  background-image: url("https://thumb.tildacdn.com/tild3130-6234-4739-b461-323535666534/-/format/webp/photo_2022-03-23_14-.jpg");
+  width: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: unset;
+  filter: brightness(50%) blur(2px);
+}
 
+@media (min-width: 1024px) {
   #app {
     display: grid;
     grid-template-columns: 1fr;
@@ -105,8 +113,14 @@ nav a:first-of-type {
   }
 
   header {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    place-items: center;
+    padding: 0 2rem;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     padding: 0 2rem;
   }
 

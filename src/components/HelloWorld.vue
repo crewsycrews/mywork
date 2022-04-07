@@ -6,8 +6,8 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>С терассой на ул. Навагинская!</h3>
+    <h1>{{ msg }}</h1>
+    <h3>С терассой на улицу Навагинская!</h3>
   </div>
 </template>
 
